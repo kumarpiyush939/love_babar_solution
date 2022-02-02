@@ -68,4 +68,4 @@ def sort012(array_012,n):
             hi -=1
     return array_012
 
-print(sort012(array_012, len(array_012)))
+#print(sort012(array_012, len(array_012)))
