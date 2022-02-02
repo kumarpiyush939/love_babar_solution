@@ -69,3 +69,33 @@ def sort012(array_012,n):
     return array_012
 
 #print(sort012(array_012, len(array_012)))
+
+#Move all the negative elements to one side of the array 
+arr02 = [-4,3,6,-6,2,7,-9,0]
+
+def rearrange(arr, n ):
+    neg = 0
+    pos = 0
+    for i in arr:
+        if arr[pos]<=0:
+            arr[pos], arr[neg] = arr[neg], arr[pos]
+            pos  +=  1
+            neg += 1
+        else:
+            pos +=1
+    return arr
+
+def rearrange02(arr, n):
+    neg = 0
+    pos = 0
+    while pos<n:
+        if arr[pos]<=0:
+            arr[pos], arr[neg] = arr[neg], arr[pos]
+            pos  +=  1
+            neg += 1
+        else:
+            pos +=1
+    return arr
+
+# print(rearrange(arr02,len(arr02)))
+# print(rearrange02(arr02,len(arr02)))
