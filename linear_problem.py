@@ -97,5 +97,54 @@ def rearrange02(arr, n):
             pos +=1
     return arr
 
+def rearrange03(arr,n):
+    left=0
+    right=n-1
+    #TODO implement with two pointer
+
 # print(rearrange(arr02,len(arr02)))
 # print(rearrange02(arr02,len(arr02)))
+
+#Find the Union and Intersection of the two sorted arrays.
+
+arr11_01 = [1,2,3,4,5,6,9,10,11]
+arra11_02 = [1,2,3,7,8,9]
+
+def intersection(arr1, arr2):
+    arr3 = list()
+    left = 0
+    right = 0
+    for i in range(len(arr1)+len(arr2)):
+        if left<len(arr1) and right<len(arr2):
+            if arr1[left] == arr2[right]:
+                arr3.append(arr1[left])
+                left +=1
+                right +=1
+            elif arr1[left]<arr2[right]:
+                left +=1
+            elif arr1[left]>arr02[right]:
+                right +=1
+    return arr3
+
+# print(intersection(arr11_01, arra11_02))
+
+def do_union(arr1, arr2):
+    arr3 = list()
+    left = 0
+    right = 0
+    for i in range(len(arr1)+len(arr2)):
+        if left<len(arr1) and right<len(arr2):
+            if arr1[left] == arr2[right]:
+                arr3.append(arr1[left])
+                left +=1
+                right +=1
+            elif arr1[left]<arr2[right]:
+                arr3.append(arr1[left])
+                left +=1
+            elif arr1[left]>arr2[right]:
+                arr3.append(arr2[right])
+                right +=1  
+            elif  
+    return arr3 
+      
+print(do_union(arr11_01, arra11_02))
